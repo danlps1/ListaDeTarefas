@@ -6,13 +6,13 @@ namespace ListaDeTarefas.Application.Interfaces;
 
 public interface IUsuarioInterface
 {
-    public ResponseDto<UsuarioModel> CadastrarUsuario(CriarUsuarioDto criarUsuarioDto);
+    public Task<ResponseDto<UsuarioModel>> CadastrarUsuario(CriarUsuarioDto criarUsuarioDto);
     
-    public ResponseDto<List<UsuarioModel>> ListarUsuarios();
+    public Task<ResponseDto<List<UsuarioModel>>> ListarUsuarios();
     
-    public ResponseDto<UsuarioModel> BuscarUsuarioPorId(int usuarioId);
+    public Task<ResponseDto<UsuarioModel>> BuscarUsuarioPorId(int usuarioId);
     
-    public ResponseDto<UsuarioModel> EditarUsuario(EditarUsuarioDto editarUsuarioDto);
+    public Task<ResponseDto<UsuarioModel>> EditarUsuario(EditarUsuarioDto editarUsuarioDto);
     
-    public ResponseDto<UsuarioModel> DeletarUsuario(int usuarioId);
+    public Task<ResponseDto<UsuarioModel>> DeletarUsuario(int usuarioId);
 }
