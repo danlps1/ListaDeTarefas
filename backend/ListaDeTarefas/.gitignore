@@ -1,0 +1,43 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+*.dbmdl
+TestResults/
+*.log
+
+# EF Core
+Migrations/
+
+# Env
+.env
+**/.env
+.env.*
+!*.env.example
+
+# Docker
+*.container
+*.tar
+docker-compose.override.yml
+
+# Rider / VS Code / JetBrains
+.idea/
+*.sln.iml
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*.bak
+*.old
+*.orig
+
+# Tests
+*.coverage
+*.testresult
