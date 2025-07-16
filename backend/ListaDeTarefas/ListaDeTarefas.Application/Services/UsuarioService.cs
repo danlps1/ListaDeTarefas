@@ -132,7 +132,7 @@ public class UsuarioService : IUsuarioInterface
             _context.Usuarios.Remove(usuario.Dados);
             await _context.SaveChangesAsync();
 
-            response.Dados = usuario.Dados;
+            response.Dados = null;
             response.Mensagem = MensagemUsuario.UsuarioExcluido;
             return response;
         }
