@@ -1,4 +1,6 @@
 using DotNetEnv;
+using ListaDeTarefas.Application.Interfaces;
+using ListaDeTarefas.Application.Services;
 using ListaDeTarefas.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
@@ -11,6 +13,9 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(conn
 
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
+builder.Services.AddScoped<ITarefaInterface, TarefaService>();
 
 var app = builder.Build();
 

@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ListaDeTarefas.Domin\ListaDeTarefas.Domin.csproj" />
+      <ProjectReference Include="..\ListaDeTarefas.Infrastructure\ListaDeTarefas.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
