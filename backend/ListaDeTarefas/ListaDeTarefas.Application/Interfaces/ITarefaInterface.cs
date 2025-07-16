@@ -7,13 +7,13 @@ namespace ListaDeTarefas.Application.Interfaces;
 
 public interface ITarefaInterface
 {
-    public ResponseDto<TarefaModel> CadastrarTarefa(CriarTarefaDto criarTarefaDto);
+    public Task<ResponseDto<TarefaModel>> CadastrarTarefa(CriarTarefaDto criarTarefaDto);
     
-    public ResponseDto<List<TarefaModel>> ListarTarefas();
+    public Task<ResponseDto<List<TarefaModel>>> ListarTarefas();
     
-    public ResponseDto<TarefaModel> BuscarTarefaPorId(int tarefaId);
+    public Task<ResponseDto<TarefaModel>> BuscarTarefaPorId(int tarefaId);
     
-    public ResponseDto<TarefaModel> EditarTarefa(EditarTarefaDto editarTarefaDto);
+    public Task<ResponseDto<TarefaModel>> EditarTarefa(EditarTarefaDto editarTarefaDto);
     
-    public ResponseDto<TarefaModel> DeletarTarefa(int tarefaId);
+    public Task<ResponseDto<TarefaModel>> DeletarTarefa(int tarefaId);
 }
