@@ -1,11 +1,10 @@
 <template>
-  <router-view></router-view>
+  <h1>Pagina tarefa principal</h1>
 </template>
 
 <script>
-
 export default {
-  setup() {
+  setup(){
 
   }
 }
