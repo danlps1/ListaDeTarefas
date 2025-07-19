@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gray-100 flex items-center justify-center px-4">
     <div class="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-xl text-center">
-      <h1 class="text-4xl font-bold text-blue-600">Lista de Tarefas</h1>
+      <h1 class="text-4xl font-bold text-gray-700">Lista de Tarefas</h1>
       <p class="text-gray-600 mt-2">Gerencie suas tarefas e usuários com facilidade</p>
 
       <div class="flex gap-6 mt-5 justify-center">
