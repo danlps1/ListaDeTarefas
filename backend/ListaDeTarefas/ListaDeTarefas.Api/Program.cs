@@ -11,6 +11,16 @@ Env.Load();
 var connectionString = Env.GetString("DB_CONNECTION_STRING");
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirRequisicoes", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
 
@@ -31,6 +41,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("PermitirRequisicoes");
 app.MapControllers();
 
 app.Run();
