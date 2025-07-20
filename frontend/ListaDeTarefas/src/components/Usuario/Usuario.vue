@@ -53,7 +53,7 @@
           <div v-else class="p-4 text-center text-gray-600">Carregando...</div>
         </div>
         <p class="py-4 text-md text-gray-700">
-          <router-link to="/cadastrarUsuario">Cadastrar usuário</router-link>
+          <router-link to="/usuarios/cadastrar">Cadastrar usuário</router-link>
         </p>
       </div>
     </main>
@@ -72,16 +72,16 @@ export default {
   setup() {
     const usuarioStore = useUsuarioStore();
 
-    const editarUsuario = async (usuario: Usuario) => {
+    const editarUsuario = async (usuario: Usuario): Promise<void> => {
       await usuarioStore.editUsuario(usuario);
     }
 
-    const deletarUsuario = async (id: number): void => {
+    const deletarUsuario = async (id: number): Promise<void> => {
       await usuarioStore.deletarUsuario(id);
       alert("Usuario deletado.");
     }
 
-    onMounted(async (): void => {
+    onMounted(async (): Promise<void> => {
       await usuarioStore.fetchUsuarios();
     })
 
