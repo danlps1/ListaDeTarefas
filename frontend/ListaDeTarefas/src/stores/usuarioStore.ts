@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import {defineStore} from 'pinia'
+import {ref} from 'vue'
 import * as usuarioService from '@/services/usuarioService'
 import type {Usuario} from "@/services/interfaces/UsuarioInterface.ts";
 

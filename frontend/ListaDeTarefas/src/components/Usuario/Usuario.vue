@@ -31,12 +31,13 @@
                 <td class="px-4 py-2">{{ user.nome }}</td>
                 <td class="px-4 py-2 text-right space-x-2">
                   <button
-                      class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded"
+                      class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded cursor-pointer"
+                      @click="editarUsuario(user)"
                   >
                     Editar
                   </button>
                   <button
-                      class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded"
+                      class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded cursor-pointer"
                       @click="deletarUsuario(user.id)"
                   >
                     Deletar
@@ -66,15 +67,16 @@ import {useUsuarioStore} from "@/stores/usuarioStore.ts";
 import {onMounted} from "vue";
 import Header from "@/components/Header.vue";
 import type {Usuario} from "@/services/interfaces/UsuarioInterface.ts";
+import router from "@/router";
 
 export default {
   components: {Header},
   setup() {
     const usuarioStore = useUsuarioStore();
 
-    const editarUsuario = async (usuario: Usuario): Promise<void> => {
-      await usuarioStore.editUsuario(usuario);
-    }
+   const editarUsuario = (usuario: Usuario)=> {
+     router.push(`/usuarios/editar/${usuario.id}`)
+   }
 
     const deletarUsuario = async (id: number): Promise<void> => {
       await usuarioStore.deletarUsuario(id);
@@ -87,7 +89,8 @@ export default {
 
     return {
       usuarioStore,
-      deletarUsuario
+      deletarUsuario,
+      editarUsuario
     }
   }
 }

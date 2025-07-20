@@ -21,8 +21,13 @@ const router = createRouter({
         },
         {
             path: '/usuarios/cadastrar',
-            name: 'CadastrarUsuario',
+            name: 'cadastrarUsuario',
             component: () => import("@/views/Usuario/UsuarioCadastrarView.vue")
+        },
+        {
+            path: `/usuarios/editar/:usuarioId`,
+            name: 'editarUsuario',
+            component: () => import("@/views/Usuario/UsuarioEditarView.vue")
         }
     ],
 })
