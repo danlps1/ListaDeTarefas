@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Tarefa from "@/components/Tarefa.vue";
+import Tarefa from "@/components/Tarefa/Tarefa.vue";
 
 export default {
   components: {Tarefa},

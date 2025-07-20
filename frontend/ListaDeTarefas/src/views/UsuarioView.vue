@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import Usuario from "@/components/Usuario.vue";
+import Usuario from "@/components/Usuario/Usuario.vue";
 
 export default {
   components: {Usuario},
