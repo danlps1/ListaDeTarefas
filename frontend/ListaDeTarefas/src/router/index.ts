@@ -15,11 +15,6 @@ const router = createRouter({
             component: () => import("@/views/Usuario/UsuarioView.vue")
         },
         {
-            path: '/tarefas',
-            name: 'tarefas',
-            component: () => import("@/views/Tarefa/TarefaView.vue")
-        },
-        {
             path: '/usuarios/cadastrar',
             name: 'cadastrarUsuario',
             component: () => import("@/views/Usuario/UsuarioCadastrarView.vue")
@@ -28,7 +23,22 @@ const router = createRouter({
             path: `/usuarios/editar/:usuarioId`,
             name: 'editarUsuario',
             component: () => import("@/views/Usuario/UsuarioEditarView.vue")
-        }
+        },
+        {
+            path: '/tarefas',
+            name: 'tarefas',
+            component: () => import("@/views/Tarefa/TarefaView.vue")
+        },
+        {
+            path: '/tarefas/cadastrar',
+            name: 'cadastrarTarefa',
+            component: () => import("@/views/Tarefa/TarefaCadastrarView.vue")
+        },
+        {
+            path: `/tarefas/editar/:tarefaId`,
+            name: 'editarTarefa',
+            component: () => import("@/views/Tarefa/TarefaEditarView.vue")
+        },
     ],
 })
 
