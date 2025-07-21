@@ -9,9 +9,6 @@
           <li>
             <router-link to="/">HOME</router-link>
           </li>
-          <li>
-            <router-link to="/about">SOBRE</router-link>
-          </li>
         </ul>
       </nav>
     </div>
