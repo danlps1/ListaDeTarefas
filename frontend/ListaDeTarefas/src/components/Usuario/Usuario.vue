@@ -56,6 +56,9 @@
         <p class="py-4 text-md text-gray-700">
           <router-link to="/usuarios/cadastrar">Cadastrar usuário</router-link>
         </p>
+        <p class="py-4 text-sm text-gray-700">
+          <router-link to="/">Voltar</router-link>
+        </p>
       </div>
     </main>
   </div>
@@ -74,9 +77,9 @@ export default {
   setup() {
     const usuarioStore = useUsuarioStore();
 
-   const editarUsuario = (usuario: Usuario)=> {
-     router.push(`/usuarios/editar/${usuario.id}`)
-   }
+    const editarUsuario = (usuario: Usuario) => {
+      router.push(`/usuarios/editar/${usuario.id}`)
+    }
 
     const deletarUsuario = async (id: number): Promise<void> => {
       await usuarioStore.deletarUsuario(id);

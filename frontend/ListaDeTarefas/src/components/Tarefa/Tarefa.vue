@@ -58,6 +58,9 @@
         <p class="py-4 text-md text-gray-700">
           <router-link to="/tarefas/cadastrar">Cadastrar tarefa</router-link>
         </p>
+        <p class="py-4 text-sm text-gray-700">
+          <router-link to="/">Voltar</router-link>
+        </p>
       </div>
     </main>
   </div>
