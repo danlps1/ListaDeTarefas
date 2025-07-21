@@ -15,7 +15,7 @@
             <label class="font-medium mb-1">Alterar nome de usuário</label>
             <form @submit.prevent>
               <input type="text"
-                     class="bg-gray-200 border-none rounded-sm px-2 py-1 min-w-[250px] focus:outline-none text-sm"
+                     class="text-center bg-gray-200 border-none rounded-sm px-2 py-1 min-w-[250px] focus:outline-none text-sm"
                      maxlength="80"
                      v-model="nomeUsuario"
               >
